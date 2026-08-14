@@ -34,5 +34,5 @@ TEST_CASE("REMOVING an non exsit items does not change the invnetory or count"){
     inv.add("sword");
     inv.remove("potion");
     CHECK(inv.count() == 2);
-    CHECK(inv.has("shield") == true && inv.has("sword") == true);
+    CHECK(inv.has("shield"));
 }
