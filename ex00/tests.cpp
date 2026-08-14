@@ -28,3 +28,11 @@ TEST_CASE("Remove should reduce the counter and has cannot find the deleted item
 }
 
 
+TEST_CASE("REMOVING an non exsit items does not change the invnetory or count"){
+    Inventory inv;
+    inv.add("shield");
+    inv.add("sword");
+    inv.remove("potion");
+    CHECK(inv.count() == 2);
+    CHECK(inv.has("shield") == true && inv.has("sword") == true);
+}
