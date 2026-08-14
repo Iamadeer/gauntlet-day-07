@@ -17,3 +17,14 @@ TEST_CASE("Check for has function can find the item"){
     CHECK(inv.has("shield") == false);
 }
 
+TEST_CASE("Remove should reduce the counter and has cannot find the deleted item"){
+    Inventory inv;
+    inv.add("sword");
+    inv.add("potion");
+    inv.remove("sword");
+    CHECK(inv.count() == 1);
+    CHECK(inv.has("sword") == false);
+
+}
+
+
