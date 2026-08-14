@@ -1,8 +1,9 @@
 #include "Inventory.hpp"
 
 
-void Inventory::add(const std::string& /*item*/){
-    
+void Inventory::add(const std::string& item){
+    m_inventory.push_back(item);
+    m_count ++;
 };
 void Inventory::remove(const std::string& /*item*/){
 
